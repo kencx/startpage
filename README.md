@@ -1,7 +1,10 @@
 # Startpage
 
-Custom minimalist browser startpage. Heavily borrowed from [Prismatic-Night](https://github.com/3r3bu5x9/Prismatic-Night).
+Custom browser startpage. Template tweaked from [Prismatic-Night](https://github.com/3r3bu5x9/Prismatic-Night).
 
-Feel free to fork.
+Font: Fira Code Nerd Font
+
+Colorscheme: Gruvbox Dark
 
 ![screenshot](screenshot.JPG)
+cat

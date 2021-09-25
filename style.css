@@ -1,16 +1,11 @@
 html{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  background:#282828;
+  font-family: "Fira Code";
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  background:#282828;
-  font-family: "Fira Code";
-    }
+}
 
 body {
   background: #282828;
@@ -22,20 +17,26 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ". left right .";
+  justify-items: center;
+  align-items: center;
   height: 100%;
   width: 100%;
-  justify-content: center;
-  align-items: center;
 }
 
-.gif {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 500px;
-  width: 500px;
+.left-container {
+  grid-area: left;
+  height: 400px;
+  width: 400px;
+}
+
+.right-container {
+  grid-area: right;
+  height: 50%;
+  width: 80%;
 }
 
 .gif img {
@@ -48,36 +49,8 @@ body {
   flex-direction: column;
   align-items: center;
   font-size: 40px;
+  padding-top: 60px;
 }
-
-/* form {
-  margin: 0px;
-  padding: 0px;
-}
-
-.search_box {
-  display: flex;
-  align-self: center;
-  border: 4px solid;
-  border-color: rgba(234, 219, 178,0.6);
-  border-radius: 10px;
-  width: 400px;
-  height: 48px;
-  margin-bottom: 40px;
-}
-
-.input_box {
-  border: none;
-  outline: none;
-  background: none;
-  width: 380px;
-  padding-top: 12px;
-
-  text-align:center;
-  font-family: "Fira Code";
-  font-size: 20px;
-  color: #EADBB2;
-} */
 
 .category {
   display: flex;
@@ -139,3 +112,32 @@ a:hover {
     opacity: 1;
   }
 }
+
+/* form {
+  margin: 0px;
+  padding: 0px;
+}
+
+.search_box {
+  display: flex;
+  align-self: center;
+  border: 4px solid;
+  border-color: rgba(234, 219, 178,0.6);
+  border-radius: 10px;
+  width: 400px;
+  height: 48px;
+  margin-bottom: 40px;
+}
+
+.input_box {
+  border: none;
+  outline: none;
+  background: none;
+  width: 380px;
+  padding-top: 12px;
+
+  text-align:center;
+  font-family: "Fira Code";
+  font-size: 20px;
+  color: #EADBB2;
+} */
