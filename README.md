@@ -1,10 +1,10 @@
 # Startpage
 
-Custom browser startpage. Template tweaked from [Prismatic-Night](https://github.com/3r3bu5x9/Prismatic-Night).
+Custom browser startpage.
 
-Font: Fira Code Nerd Font
+Font: Fira Code
 
 Colorscheme: Gruvbox Dark
 
-![screenshot](screenshot.JPG)
-cat
+![startpage](startpage.gif)
+<p style="text-align: center;">cat</p>

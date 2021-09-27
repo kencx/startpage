@@ -1,14 +1,6 @@
-html{
+html, body {
   background:#282828;
   font-family: "Fira Code";
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: #282828;
   color: #EADBB2;
   height: 100%;
   width: 100%;
@@ -18,25 +10,25 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 460px 600px 1fr;
   grid-template-areas:
     ". left right .";
+  column-gap: 80px;
   justify-items: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
 }
 
 .left-container {
   grid-area: left;
-  height: 400px;
-  width: 400px;
+  aspect-ratio: 1/1;
 }
 
 .right-container {
   grid-area: right;
   height: 50%;
-  width: 80%;
+  width: 100%;
+  /* border: 1px solid white; */
 }
 
 .gif img {
@@ -58,12 +50,12 @@ body {
   width: 180px;
 }
 
-.bookmark {
+.bookmarks {
   display: flex;
   justify-content: center;
 }
 
-.bookmarks {
+.links {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,32 +104,3 @@ a:hover {
     opacity: 1;
   }
 }
-
-/* form {
-  margin: 0px;
-  padding: 0px;
-}
-
-.search_box {
-  display: flex;
-  align-self: center;
-  border: 4px solid;
-  border-color: rgba(234, 219, 178,0.6);
-  border-radius: 10px;
-  width: 400px;
-  height: 48px;
-  margin-bottom: 40px;
-}
-
-.input_box {
-  border: none;
-  outline: none;
-  background: none;
-  width: 380px;
-  padding-top: 12px;
-
-  text-align:center;
-  font-family: "Fira Code";
-  font-size: 20px;
-  color: #EADBB2;
-} */
