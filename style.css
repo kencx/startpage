@@ -1,7 +1,15 @@
+:root {
+    --color-bg: #282828;
+    --color-fg: #EADBB2;
+    --color-link: #8F9191;
+    --color-link-visited: #668F8B;
+    --color-link-hover: #FA7921 ;
+}
+
 html, body {
-  background:#282828;
+  background: var(--color-bg);
+  color: var(--color-fg);
   font-family: "Fira Code";
-  color: #EADBB2;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -74,15 +82,15 @@ li {
 
 a:link {
   text-decoration: none;
-  color: #8F9191;
+  color: var(--color-link);
 }
 
 a:visited {
-  color: #668F8B;
+  color: var(--color-link-visited);
 }
 
 a:hover {
-  color: #FA7921;
+  color: var(--color-link-hover);
 }
 
 .blinking {
