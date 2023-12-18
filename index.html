@@ -4,7 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <title>~/startpage</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            body {
+                @apply w-screen h-screen bg-slate-950;
+            } 
+            .container {
+                @apply min-h-full flex flex-col md:flex-row justify-center;
+            }
+            .left-container {
+                @apply flex items-center justify-center flex-shrink;
+            }
+            .gif {
+                @apply aspect-square w-[300px] m-4;
+            }
+            .right-container {
+                @apply md:w-6/12 flex flex-col justify-center items-center;
+            }
+            .head {
+                @apply font-serif text-yellow-600 text-3xl mt-4 mb-8;
+            }
+            .blinking {
+                @apply inline-block animate-pulse;
+            }
+            .bookmarks {
+                @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-4;
+            }
+            .links {
+                @apply list-none text-center space-y-2 text-blue-400;
+            }
+            .links li:not(.title) a {
+                @apply relative inline-block;
+            }
+            .links li:not(.title) a::before {
+                @apply block w-0 h-[2px] bg-blue-400 content-[''] absolute -bottom-1 transition-all;
+            }
+            .links li:not(.title) a:hover::before,
+            .links li:not(.title) a:focus::before {
+                @apply w-full; 
+            }
+            .title {
+                @apply text-lg font-serif text-yellow-600;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -16,50 +62,42 @@
         </div>
 
         <div class="right-container">
-            <div class="head">
-                <p>> cd ~/<span class="blinking">_</span></p>
+             <div class="head">
+                <p aria-label="startpage">> cd ~/<span class="blinking">&block;</span></p>
             </div>
 
             <div class="bookmarks">
-                <div class="category">
-                    <div class="links">
-                        <li class="title">work</li>
-                        <li><a href="https://gmail.com">gmail</a></li>
-                        <li><a href="https://outlook.office.com">outlook</a></li>
-                        <li><a href="https://linkedin.com">linkedin</a></li>
-                        <li><a href="https://vim.rtorr.com/">vim</a></li>
-                    </div>
-                </div>
+                <ul class="links">
+                    <li class="title">work</li>
+                    <li><a href="https://gmail.com">gmail</a></li>
+                    <li><a href="https://outlook.office.com">outlook</a></li>
+                    <li><a href="https://linkedin.com">linkedin</a></li>
+                    <li><a href="https://vim.rtorr.com/">vim</a></li>
+                </ul>
 
-                <div class="category">
-                    <div class="links">
-                        <li class="title">dev</li>
-                        <li><a href="https://github.com/">github</a></li>
-                        <li><a href="https://lobste.rs/">lobste.rs</a></li>
-                        <li><a href="https://mankier.com/">mankier</a></li>
-                        <li><a href="https://devdocs.io/">devdocs</a></li>
-                    </div>
-                </div>
+                <ul class="links">
+                    <li class="title">dev</li>
+                    <li><a href="https://github.com/">github</a></li>
+                    <li><a href="https://lobste.rs/">lobste.rs</a></li>
+                    <li><a href="https://mankier.com/">mankier</a></li>
+                    <li><a href="https://devdocs.io/">devdocs</a></li>
+                </ul>
 
-                <div class="category">
-                    <div class="links">
-                        <li class="title"><a style="color: #EADBB2" href="https://reddit.com">reddit</a></li>
-                        <li><a href="https://reddit.com/r/programming/">programming</a></li>
-                        <li><a href="https://reddit.com/r/selfhosted/">selfhosted</a></li>
-                        <li><a href="https://reddit.com/r/unixporn/">unixporn</a></li>
-                        <li><a href="https://reddit.com/r/mechanicalkeyboards/">mk</a></li>
-                    </div>
-                </div>
+                <ul class="links">
+                    <li class="title"><a style="color: #EADBB2" href="https://reddit.com">reddit</a></li>
+                    <li><a href="https://reddit.com/r/programming/">programming</a></li>
+                    <li><a href="https://reddit.com/r/selfhosted/">selfhosted</a></li>
+                    <li><a href="https://reddit.com/r/unixporn/">unixporn</a></li>
+                    <li><a href="https://reddit.com/r/mechanicalkeyboards/">mk</a></li>
+                </ul>
 
-                <div class="category">
-                    <div class="links">
-                        <li class="title">play</li>
-                        <li><a href="https://monkeytype.com/">monkeytype</a></li>
-                        <li><a href="https://youtube.com/">youtube</a></li>
-                        <li><a href="https://twitch.tv/">twitch</a></li>
-                        <li><a href="https://netflix.com/">netflix</a></li>
-                    </div>
-                </div>
+                <ul class="links">
+                    <li class="title">play</li>
+                    <li><a href="https://monkeytype.com/">monkeytype</a></li>
+                    <li><a href="https://youtube.com/">youtube</a></li>
+                    <li><a href="https://twitch.tv/">twitch</a></li>
+                    <li><a href="https://netflix.com/">netflix</a></li>
+                </ul>
             </div>
         </div>
     </div>
